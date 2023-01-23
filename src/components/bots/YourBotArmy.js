@@ -1,14 +1,23 @@
 import React, {useState} from "react";
 import SelectedBot from "./SelectedBot";
 
-function YourBotArmy({botId, bots}){
+function YourBotArmy({botId, bots, setBotId}){
 
-    const [deletedBotId, setDeletedBotId] = useState([])
+
+
+    // delete function
+    function handleDelete(input){
+        setBotId(botId.filter((bot)=>bot !== input))
+        console.log(input)
+    }
+
+
+    
 
 
     // to filter the clicked bot and the  bot list 
 
-    const theSelectedArmy = bots.filter((bot)=>{
+    let theSelectedArmy = bots.filter((bot)=>{
         for(let i=0 ; i< botId.length; i++ ){
             if(bot.id=== botId[i]){
                 return bot
@@ -20,9 +29,7 @@ function YourBotArmy({botId, bots}){
 
 
     //functon to get the ids of the selected to be removed bots in the selected army
-    function handleDelete(input){
-        setDeletedBotId(input)
-    }
+
 
 
     console.log(theSelectedArmy)

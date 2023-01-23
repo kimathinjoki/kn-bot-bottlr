@@ -1,10 +1,11 @@
 import React from "react";
+import { FaHeartbeat } from "react-icons/fa";
+import { BsFillLightningFill, BsShieldShaded } from "react-icons/bs";
+import { AiOutlineDelete } from "react-icons/ai";
+
+
 
 function BotItem({image,name, health, damage, armor, bot_class, catchphrase, id, handleClicked}){
-
-    // const [botId, setBotId] = useState([])
-    // console.log(botId)
-
 
     return(
         <div className="col-3 p-1" >
@@ -15,7 +16,9 @@ function BotItem({image,name, health, damage, armor, bot_class, catchphrase, id,
                 <h4 className="card-title">{bot_class}</h4>
                 <p className="card-text">{catchphrase}</p>
                 <hr/>  
-                <p><span>Health:{health}</span> <span>Damage:{damage}</span> <span>Armor:{armor}</span></p>
+                <p><span> <FaHeartbeat/> {health} </span> <span> <BsFillLightningFill/> {damage}</span> <span> <BsShieldShaded/> {armor}</span></p>
+                <button type="button" class="btn btn-outline-danger"> <AiOutlineDelete/> </button>
+                
             </div>
         </div>
     </div>

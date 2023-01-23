@@ -43,4 +43,4 @@ This project was contributed to by [Kimathi Njoki](https://github.com/kimathinjo
 
 ### License
 
-This project is under ISC License.
+This project is under ISC License
