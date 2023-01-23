@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import SelectedBot from "./SelectedBot";
+import { GiRobotGolem } from "react-icons/gi";
 
 function YourBotArmy({botId, bots, setBotId}){
 
@@ -47,7 +48,7 @@ function YourBotArmy({botId, bots, setBotId}){
             <div className="container  mt-4" id="selection">
                 
             <div className="row">
-                <center><h2 style={{color:"red"}} id="armySelect">Bot Army</h2></center>
+                <center><h2 style={{color:"red"}} id="armySelect">Bot <GiRobotGolem/> Army</h2></center>
             
                 {theeBots}
 
