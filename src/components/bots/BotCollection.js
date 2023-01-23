@@ -48,7 +48,7 @@ function BotCollection(){
     return(
         <div>
             {/* <YourBotArmy handleClick ={handleClick} handleRemoveSelection={handleRemoveSelection} botSelect={botSelect}/> */}
-            <YourBotArmy botId={botId}/>
+            <YourBotArmy botId={botId} bots={bots}/>
         <div className="container mt-4">
             <div className="row">
                 {botContent}

@@ -4,28 +4,18 @@ import SelectedBot from "./SelectedBot";
 const request_url = "http://localhost:3000/bots"
 
 
-function YourBotArmy({botId}){
+function YourBotArmy({botId, bots}){
 
     const [botSelect, setBotSelect] = useState([])
-    const [allBots,setAllBots] = useState([])
 
-
-    useEffect(()=>{
-        fetch(request_url)
-        .then(r => r.json())
-        .then(data=>{
-            setAllBots(data)
-            console.log(data)
-            // setBotSelect(allBots.filter((allBots)=>{
-            //     if(allBots.id === botId)return allBots;
-            // }))
-            // console.log(botSelect)
-
-        })
-
-    },[])
-
-    const theSelectedArmy = allBots.filter((bots)=>bots.id===botId
+    const theSelectedArmy = bots.filter((bot)=>{
+        for(let i=0 ; i< botId.length; i++ ){
+            if(bot.id=== botId[i]){
+                return bot
+        }
+        }
+    }
+    
         // return botId.map((id)=>bots.id===id)
     )
 
@@ -40,7 +30,7 @@ function YourBotArmy({botId}){
     console.log(botSelect)
 
 
-    const theeBots = botSelect.map((content,index)=><SelectedBot image={content.avatar_url} name={content.name} health={content.health} damage={content.damage} armor={content.armor} bot_class={content.bot_class} catchphrase={content.catchphrase}  key={content.name+index} id={content.id} />)
+    const theeBots = theSelectedArmy.map((content,index)=><SelectedBot image={content.avatar_url} name={content.name} health={content.health} damage={content.damage} armor={content.armor} bot_class={content.bot_class} catchphrase={content.catchphrase}  key={content.name+index} id={content.id} />)
 
 
 
