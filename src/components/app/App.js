@@ -6,11 +6,8 @@ import {Route, Routes} from "react-router-dom"
 function App() {
   return (
     <div>
-      <YourBotArmy/>
-
+      {/* <YourBotArmy/> */}
       <BotCollection/>
-
-
       {/* <Routes>
         <Route path="/bots" element={<BotCollection/>} />
       </Routes> */}
