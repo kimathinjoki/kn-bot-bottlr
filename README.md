@@ -1,4 +1,4 @@
-### Title
+## Title
 
 Bot Army Selector
 
@@ -25,9 +25,9 @@ This is our app:
 
 ### Running
 
-* Open the following [link](url) in your web browser:
+* Open the following [link](https://kn-bot-bottlr.vercel.app/) in your web browser:
 
-* ``` link ```
+* ``` https://kn-bot-bottlr.vercel.app/ ```
 
 * Go through the list of bots available.
 
