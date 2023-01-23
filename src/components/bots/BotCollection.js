@@ -26,9 +26,14 @@ function BotCollection(){
 
     
 
-    // function handleRemoveSelection(e){
-    //      return botSelect.filter((removeBot)=> removeBot.id !== e.id)
-    // }
+    function handleDelete(id){
+         fetch(`url/${id}`,{
+            method: "DELETE",
+         })
+         .then(()=>{
+            setBots((bots=> bots.filter((bt)=>bt.id !== id)))
+         })
+    }
 
 // state to get bot id's when the bot item is clicked in BotItem Compatment
     const [botId, setBotId] = useState([])
@@ -43,7 +48,7 @@ function BotCollection(){
 
 
 
-    const botContent= bots.map((content,index)=><BotItem image={content.avatar_url} name={content.name} health={content.health} damage={content.damage} armor={content.armor} bot_class={content.bot_class} catchphrase={content.catchphrase} id={content.id} handleClicked={handleClicked}/>)
+    const botContent= bots.map((content,index)=><BotItem image={content.avatar_url} name={content.name} health={content.health} damage={content.damage} armor={content.armor} bot_class={content.bot_class} catchphrase={content.catchphrase} id={content.id} handleClicked={handleClicked} handleDelete={handleDelete}/>)
 
     return(
         <div>

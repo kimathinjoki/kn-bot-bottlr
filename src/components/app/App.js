@@ -6,6 +6,9 @@ import {Route, Routes} from "react-router-dom"
 function App() {
   return (
     <div>
+      <div id="wartime">
+        <h1 id="header">WAR-TIME</h1>
+      </div>
       {/* <YourBotArmy/> */}
       <BotCollection/>
       {/* <Routes>

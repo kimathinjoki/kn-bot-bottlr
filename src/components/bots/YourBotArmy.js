@@ -46,8 +46,8 @@ function YourBotArmy({botId, bots, setBotId}){
             <div>
             <div className="container  mt-4" id="selection">
                 
-            <div className="row border border-success">
-                <center><h2 style={{color:"white"}}>Selected Bot Army</h2></center>
+            <div className="row">
+                <center><h2 style={{color:"red"}} id="armySelect">Bot Army</h2></center>
             
                 {theeBots}
 
