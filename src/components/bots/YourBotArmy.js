@@ -25,7 +25,7 @@ function YourBotArmy({botId}){
 
     },[])
 
-    const theSelectedArmy = allBots.filter((bots)=>bots.id.includes(botId)
+    const theSelectedArmy = allBots.filter((bots)=>bots.id===botId
         // return botId.map((id)=>bots.id===id)
     )
 
@@ -48,7 +48,7 @@ function YourBotArmy({botId}){
         <div>
             {/* {theeBots} */}
             <div>
-            <div className="container  mt-4">
+            <div className="container  mt-4" id="selection">
                 
             <div className="row border border-success">
                 <center><h2 style={{color:"white"}}>Selected Bot Army</h2></center>
