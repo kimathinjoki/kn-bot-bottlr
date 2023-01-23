@@ -3,7 +3,8 @@ import BotItem from "./BotItem";
 import YourBotArmy from "./YourBotArmy";
 
 
-const url="http://localhost:3000/bots"
+// const url="http://localhost:3000/bots"
+const url ="https://api.npoint.io/71ade897bca056f9f9ad/bots/"
 
 function BotCollection(){
 
@@ -27,7 +28,7 @@ function BotCollection(){
     
 
     function handleDelete(id){
-         fetch(`url/${id}`,{
+         fetch(`url${id}`,{
             method: "DELETE",
          })
          .then(()=>{
