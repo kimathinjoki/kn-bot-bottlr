@@ -1,6 +1,6 @@
 import React from "react";
 
-function SelectedBot({image,name, health, damage, armor, bot_class, catchphrase, id}){
+function SelectedBot({image,name, health, damage, armor, bot_class, catchphrase,id,handleDelete}){
     return(
         <div className="col-3 p-1">
         <div className="card border-warning h-100" key={name+id}>
