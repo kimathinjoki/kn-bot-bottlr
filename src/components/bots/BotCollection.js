@@ -4,7 +4,7 @@ import YourBotArmy from "./YourBotArmy";
 
 
 // const url="http://localhost:3000/bots"
-const url ="https://api.npoint.io/71ade897bca056f9f9ad/bots/"
+const url ="https://bot-btlr-jason-server.vercel.app/bots/"
 
 function BotCollection(){
 
